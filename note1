@@ -1,0 +1,185 @@
+using System;
+
+namespace vscodedemo
+{
+    class Program
+    {
+       /* static void Main(string[] args)//画图
+        {
+            for(int i=0;i<5;i++)
+            {
+                for(int j=0;j<i+5;j++)
+                {
+                    if(i+j<4)
+                    {
+                        Console.Write("*  ");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                   
+                }
+                Console.WriteLine();
+            }
+            
+        }*/ 
+
+      /*  static void Main(string[] args)//回文数
+        {         
+            int number=48948;
+            int num=number;
+            Console.WriteLine(number);
+            int n=0;
+            for(int i=0;i<5;i++)
+            {              
+               int m=1;
+                for(int j=0;i+j<4;j++)
+                {
+                    m*=10;
+                }
+                n+=number%10*m;
+                number=number/10;   
+            }
+             Console.WriteLine(n);
+
+        }*/ 
+
+       /* static void Main(string[] args)//break;continue
+        {
+            int n=0;
+           for(int i=0;i<10;i++)
+           {
+               
+                n++;
+                if(n==5)
+                {
+                    Console.WriteLine("在第"+n+"步捡到钱");continue;
+                }
+               Console.WriteLine("走"+n+"步");
+
+              
+           }
+        } */
+      /* static void Main(string[] args)//do-while先执行循环体再执行while
+        {
+            do
+            {
+                Console.WriteLine("111");//循环体
+            }
+            while(false);
+        } */ 
+
+      /*   static void Main(string[] args)//九九乘法表
+        {
+           PrintTable();
+        }
+        static void PrintTable()
+        {
+            for(int i=1;i<=9;i++)
+            {
+                for(int j=1;j<=i;j++)
+                {
+                    Console.Write("{0}x{1}={2:00} ",i,j,i*j);
+                }
+                Console.WriteLine();
+            }
+        }*/
+
+/* 
+        static void Main(string[] args)
+        {
+          
+        }
+*/
+     /*    static void Main(string[] args) //引用
+        {
+          int a=10;
+          Change(a);
+          Console.WriteLine(a);
+        }
+        
+        static void Change(int x)
+        {
+            x=100;
+        }*/
+
+     /*   static void Main(string[] args)//选择排序
+        {
+          int[] array={5,8,1,6,4,9,7,3,2,0};                 
+          for(int n=0;n<array.Length-1;n++)
+          {
+             int min=array[n];
+             for(int i=n+1;i<array.Length;i++)
+             {
+                if(min>array[i])
+                {
+                  int temp=array[n];
+                   min=array[i];
+                   array[n]=array[i];
+                   array[i]=temp;
+                }
+             }           
+        }
+          
+        foreach(int num in array)
+        {
+              Console.Write(num+" ");
+        }
+        Console.WriteLine();
+
+         for(int i=0;i<array.Length;i++)
+         {
+             Console.Write(array[i]+" ");
+         }
+        }*/ 
+
+        static void Main(string[] args)
+        {
+          int[] array={5,8,1,6,4,9,7,3,2,0};
+          int[] array2={10,20,54,86,165,78,1,48};
+          Bubblesort(array);
+          Bubblesort(array2);
+          foreach(int ele in array)
+          {
+            Console.Write(ele+" ");
+          }
+          Console.WriteLine();
+         
+        }
+
+        static void sort(int[] array)//选择排序
+        {
+            for(int i=0;i<array.Length-1;i++)
+            {
+                for(int j=i+1;j<array.Length;j++)
+                {
+                    if(array[i]>array[j])
+                    {
+                        int temp=array[i];
+                        array[i]=array[j];
+                        array[j]=temp;
+                    }
+                }
+            }
+        }
+
+        static void Bubblesort(int[] array)//冒泡排序
+        {
+            for(int i=0;i<array.Length-1;i++)
+            {
+               for(int j=0;j<array.Length-i-1;j++)
+               {                
+                   if(array[j]>array[j+1])
+                   {
+                       int temp=array[j];
+                       array[j]=array[j+1];
+                       array[j+1]=temp;
+                   }
+               }
+            }
+
+        }//
+
+    }
+}
