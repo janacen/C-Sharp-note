@@ -1,0 +1,222 @@
+ /*    static void Main(string[] args)
+        {
+           
+            Process();
+           
+           for(int i=1;i<=10;i++)
+           {
+               int num=Process2(i);
+               Console.WriteLine(num+" ");
+           }
+        }
+        static void Process()//斐波拉契数列
+        {
+            int num1=1;int num2=1;
+            for(int i=1;i<=10;i++)
+            {               
+                int num=num1+num2;
+                num2=num1;
+                num1=num;
+                Console.WriteLine(num+" ");           
+            }
+        }
+        static int Process2(int n)//递归实现斐波拉契数列
+        {
+            if(n==1||n==2)
+            {
+                return 1;
+            }
+            return Process2(n-1)+Process2(n-2);
+        }*/
+
+      /*  static void Main(string[] args)//随机数
+        {
+           int num=GetRandomRange(5,6);
+           Console.WriteLine(num);
+        }
+        static int GetRandomRange(int N,int M)
+        {
+            if(N==M)
+            {
+                return N;
+            }
+            if(N>M)
+            {
+                N=N+M;
+                M=N-M;
+                N=N-M;
+            }
+            Random ra=new Random();
+            return N+(ra.Next(M-N+1));                 
+        } */
+
+      /*   static void Main(string[] args)//计算数组中第二大的数字
+        {
+            int[] str={1,56,4484,1000,54,64,46};
+            int num=0;
+            int num1=0;
+            sort(str);
+            for(int i=0;i<str.Length;i++)
+            {
+                
+                if(num<str[i])
+                {
+                    num1=num;
+                    num=str[i];
+                }
+            }
+            Console.WriteLine(num1);
+        }
+        static void sort(int[] str)
+        {
+            for(int i=0;i<str.Length-1;i++)
+            {
+                for(int j=i+1;j<str.Length;j++)
+                {
+                    if(str[i]>str[j])
+                    {
+                        int temp=str[i];
+                        str[i]=str[j];
+                        str[j]=temp;
+                    }
+                }
+            }
+        }*/
+
+        /*static void Main(string[] args)//求素数
+        {
+            Console.WriteLine("2");
+            bool bo=false;
+            int num=0;
+            for(int i=3;i<=100;i++)
+            {               
+                for(int j=2;j<i/2;j++)
+                {
+                    if(i%j==0)
+                    {
+                        bo=false;break;
+                    }
+                    else
+                    {
+                        bo=true;
+                    }
+                    
+                }
+            if(bo)
+            {
+                Console.WriteLine(i);
+            }    
+              
+            }
+            
+        } */
+
+      /*  static void Main(string[] args)
+        {
+            int num=GetFibonacci(10);
+            for(int i=1;i<=100;i++)
+            {
+                Console.WriteLine(GetFibonacci1(i));
+            }
+            
+            Console.WriteLine(num);
+        }
+
+        static int GetFibonacci1(int N)
+        {
+            if(N==1||N==2)
+            {
+                return 1;
+            }
+            return GetFibonacci1(N-1)+GetFibonacci1(N-2);
+        }
+
+        static int GetFibonacci(int N)
+        {
+            if(N==1||N==2)
+            {
+                return 1;
+            }
+            if(N==3)
+            {
+                return 2;
+            }
+            int num0=2;
+            int num1=3;
+            int num=5;
+            for(int i=0;i<N-4;i++)
+            {
+                num=num0+num1;
+                num0=num1;
+                num1=num;
+               
+            }
+            return num;
+        } */
+/* 
+        static void Main(string[] args)
+        {
+            int[] array={1,45,78,15,987,45,12,19,47,13};           
+            sort(array);
+           
+            foreach(int ele in array)
+            {
+                Console.Write(ele+" ");
+            }          
+            int index1=SortSearch(array,15);
+            int index2=BinarySearch(array,13);
+            Console.WriteLine();
+            Console.WriteLine(index1);
+            Console.WriteLine(index2);
+        }
+
+        static void sort(int[] array)//选择排序
+        {
+            for(int i=0;i<array.Length-1;i++)
+            {
+                for(int j=i+1;j<array.Length;j++)
+                {
+                    if(array[i]>array[j])
+                    {
+                        int temp=array[i];
+                        array[i]=array[j];
+                        array[j]=temp;
+                    }
+                }
+            }
+        }
+        static int SortSearch(int[] array,int ele)//顺序查找
+        {
+            for(int i=0;i<array.Length;i++)
+            {
+                if(ele==array[i])
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        static int BinarySearch(int[] array,int ele)//二分查找
+        {
+            int min=0;
+            int max=array.Length-1;
+            while(max>=min)
+            {
+                int mid=(min+max)/2;
+                if(ele==array[mid])
+                {
+                    return mid;
+                }
+                else if(ele<array[mid])
+                {
+                    max=mid-1;
+                }
+                else
+                {
+                    min=mid+1;
+                }                   
+            }
+            return -1;      
+        }
+
+        */
